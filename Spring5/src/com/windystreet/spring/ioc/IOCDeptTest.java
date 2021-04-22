@@ -38,7 +38,6 @@ public class IOCDeptTest {
     /**
      * 级联赋值bean
      */
-
     @Test
     public void test2() {
         ApplicationContext context = new ClassPathXmlApplicationContext("dep2.xml");
