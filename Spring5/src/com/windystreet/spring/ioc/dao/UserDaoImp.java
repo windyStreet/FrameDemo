@@ -1,4 +1,4 @@
-package com.windystreet.spring.dao;
+package com.windystreet.spring.ioc.dao;
 
 /**
  * @author windyStreet

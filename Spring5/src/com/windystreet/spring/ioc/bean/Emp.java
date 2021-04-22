@@ -1,4 +1,4 @@
-package com.windystreet.spring.bean;
+package com.windystreet.spring.ioc.bean;
 
 /**
  * @author windyStreet

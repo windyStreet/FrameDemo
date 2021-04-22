@@ -1,10 +1,9 @@
 package com.windystreet.spring.ioc;
 
-import com.windystreet.spring.bean.Emp;
+import com.windystreet.spring.ioc.bean.Emp;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  * @author windyStreet

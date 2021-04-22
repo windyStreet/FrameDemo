@@ -1,6 +1,6 @@
-package com.windystreet.spring.service;
+package com.windystreet.spring.ioc.service;
 
-import com.windystreet.spring.dao.UserDao;
+import com.windystreet.spring.ioc.dao.UserDao;
 
 /**
  * @author windyStreet

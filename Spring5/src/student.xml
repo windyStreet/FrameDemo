@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+    <bean id="student" class="com.windystreet.spring.ioc.collection.Student">
+        <property name="courses">
+            <array>
+                <value>语文</value>
+                <value>数学</value>
+                <value>计算机</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>周一</value>
+                <value>周二</value>
+                <value>周三</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="Java" value="java"></entry>
+                <entry key="PHP" value="php"></entry>
+            </map>
+        </property>
+        <!--        <property name="sets">-->
+        <!--            <set>-->
+        <!--                <value>A-99.3</value>-->
+        <!--                <value>B-87.9</value>-->
+        <!--                <value>A-96.1</value>-->
+        <!--                <value>B-96.7</value>-->
+        <!--            </set>-->
+        <!--        </property>-->
+        <property name="sets">
+            <set>
+                <value>99.3</value>
+                <value>87.9</value>
+                <value>96.1</value>
+                <value>96.7</value>
+            </set>
+        </property>
+        <property name="courseList">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+                <ref bean="course3"></ref>
+                <ref bean="course4"></ref>
+            </list>
+        </property>
+    </bean>
+    <!--   创建多个course对象-->
+    <bean id="course1" class="com.windystreet.spring.ioc.collection.Course">
+        <property name="courseName" value="英语"></property>
+    </bean>
+
+    <bean id="course2" class="com.windystreet.spring.ioc.collection.Course">
+        <property name="courseName" value="数学"></property>
+    </bean>
+
+    <bean id="course3" class="com.windystreet.spring.ioc.collection.Course">
+        <property name="courseName" value="语文"></property>
+    </bean>
+    <bean id="course4" class="com.windystreet.spring.ioc.collection.Course">
+        <property name="courseName" value="体育"></property>
+    </bean>
+</beans>
