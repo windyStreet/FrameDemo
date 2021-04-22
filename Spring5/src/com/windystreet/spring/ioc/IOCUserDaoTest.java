@@ -20,11 +20,4 @@ public class IOCUserDaoTest {
         userService.add();
     }
 
-    /**
-     * 注入内部bean
-     */
-    @Test
-    public void test1() {
-    }
-
 }
