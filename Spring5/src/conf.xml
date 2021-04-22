@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
-    <bean id="user" class="com.windystreet.spring.User">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 创建beanIOC对象-->
+    <bean id="user" class="com.windystreet.spring.User"></bean>
+
+    <!--set 注入-->
+    <bean id="book" class="com.windystreet.spring.Book">
+        <property name="name" value="代码设计模式"></property>
+        <property name="author" value="秦小波"></property>
+        <!-- null值处理 -->
+        <!--<property name="address" >
+            <null/>
+        </property>-->
+        <!-- 特殊符号处理-->
+        <!-- 1、转义处理 -->
+        <!-- 2、特殊符号写到CDATA中 -->
+        <!--<property name="address" value="<武汉>"></property>-->
+        <property name="address">
+            <value><![CDATA[<武汉>]]]></value>
+        </property>
+    </bean>
+
+    <!-- 构造器注入-->
+    <bean id="order" class="com.windystreet.spring.Order">
+        <constructor-arg name="orderName" value="aliPay-test"></constructor-arg>
+        <constructor-arg name="price" value="0.01"></constructor-arg>
+        <!--<constructor-arg index="0" value="wxPay-test"></constructor-arg>-->
 
     </bean>
 
