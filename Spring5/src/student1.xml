@@ -27,7 +27,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
         <value>计算机</value>
     </util:list>
 
-    <bean id="student" class="com.windystreet.spring.ioc.collection.Student">
+    <bean id="student" class="com.windystreet.ioc.spring.ioc.collection.Student">
         <property name="courses"  ref="student_course_arr"></property>
         <property name="list" ref="student_list"></property>
         <property name="maps" ref="student_maps"></property>
@@ -42,18 +42,18 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
         </property>
     </bean>
     <!--   创建多个course对象-->
-    <bean id="course1" class="com.windystreet.spring.ioc.collection.Course">
+    <bean id="course1" class="com.windystreet.ioc.spring.ioc.collection.Course">
         <property name="courseName" value="英语"></property>
     </bean>
 
-    <bean id="course2" class="com.windystreet.spring.ioc.collection.Course">
+    <bean id="course2" class="com.windystreet.ioc.spring.ioc.collection.Course">
         <property name="courseName" value="数学"></property>
     </bean>
 
-    <bean id="course3" class="com.windystreet.spring.ioc.collection.Course">
+    <bean id="course3" class="com.windystreet.ioc.spring.ioc.collection.Course">
         <property name="courseName" value="语文"></property>
     </bean>
-    <bean id="course4" class="com.windystreet.spring.ioc.collection.Course">
+    <bean id="course4" class="com.windystreet.ioc.spring.ioc.collection.Course">
         <property name="courseName" value="体育"></property>
     </bean>
 

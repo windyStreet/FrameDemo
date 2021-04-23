@@ -4,5 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
 <!--    <bean id="person" class="com.windystreet.spring.User" scope="prototype"></bean>-->
 <!--    <bean id="person" class="com.windystreet.spring.User"></bean>-->
-    <bean id="person" class="com.windystreet.spring.User" scope="singleton"></bean>
+    <bean id="person" class="com.windystreet.ioc.spring.User" scope="singleton"></bean>
 </beans>

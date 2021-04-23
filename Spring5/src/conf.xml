@@ -4,10 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 创建beanIOC对象-->
-    <bean id="user" class="com.windystreet.spring.User"></bean>
+    <bean id="user" class="com.windystreet.ioc.spring.User"></bean>
 
     <!--set 注入-->
-    <bean id="book" class="com.windystreet.spring.Book">
+    <bean id="book" class="com.windystreet.ioc.spring.Book">
         <property name="name" value="代码设计模式"></property>
         <property name="author" value="秦小波"></property>
         <!-- null值处理 -->
@@ -24,7 +24,7 @@
     </bean>
 
     <!-- 构造器注入-->
-    <bean id="order" class="com.windystreet.spring.Order">
+    <bean id="order" class="com.windystreet.ioc.spring.Order">
         <constructor-arg name="orderName" value="aliPay-test"></constructor-arg>
         <constructor-arg name="price" value="0.01"></constructor-arg>
         <!--<constructor-arg index="0" value="wxPay-test"></constructor-arg>-->

@@ -3,14 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
     <!-- 内部bean -->
-    <bean id="emp" class="com.windystreet.spring.ioc.bean.Emp">
+    <bean id="emp" class="com.windystreet.ioc.spring.ioc.bean.Emp">
         <!-- 设置两个普通属性 -->
         <property name="name" value="tom"></property>
         <property name="gender" value="1"></property>
        <!--级联赋值-->
         <property name="dept" ref="dept"></property>
     </bean>
-    <bean id="dept" class="com.windystreet.spring.ioc.bean.Dept">
+    <bean id="dept" class="com.windystreet.ioc.spring.ioc.bean.Dept">
         <property name="partName" value="安保部"></property>
     </bean>
 </beans>

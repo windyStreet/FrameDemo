@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+    <!--
+        实现自动装配
+        bean标签属性 autowire配置自动装配
+            byName 根据属性名称自动注入,注入值bean的id值和类属性名称一样
+            byType 根据属性类型注入
+    -->
+<!--        <bean id="emp" class="com.windystreet.spring.ioc.autowire.Emp" autowire="byType">-->
+        <bean id="emp" class="com.windystreet.ioc.spring.ioc.autowire.Emp" autowire="byName">
+        </bean>
+<!--    <bean id="emp" class="com.windystreet.spring.ioc.autowire.Emp">-->
+<!--        手动装配-->
+<!--        <property name="dept" ref="dept"></property>-->
+<!--    </bean>-->
+    
+    <bean id="dept" class="com.windystreet.ioc.spring.ioc.autowire.Dept"></bean>
+</beans>

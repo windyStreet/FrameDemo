@@ -1,6 +1,6 @@
 package com.windystreet.test;
 
-import com.windystreet.spring.User;
+import com.windystreet.ioc.spring.User;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
