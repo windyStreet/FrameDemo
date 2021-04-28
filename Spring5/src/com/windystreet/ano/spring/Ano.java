@@ -29,11 +29,25 @@ public class Ano {
     /**
      * 基于注解方式实现属性注入
      * 1、@AutoWired 根据属性类型进行自动装配
+     *          @Autowired // 根据类型注入
+     *          private UserDao userDao;
      * 2、@Qualifier 根据属性名称进行注入
+     *          这个注解的使用，需要和@AutoWired一起使用
      * 3、@Resource 可以根据类型注入 可以根据名称注入
+     *      即可以根据类型也可以根据名称注入
      * 4、@Value 注入普通类型属性
+     *      可以直接注入值
      *
      * A、 在service 和 dao 对象创建，在service 和 dao类天安家创建对象注解
      * B、在service 注入 dao对象，在service类添加dao类型属性，在属性上面使用注解【不需要添加set方法】
+     *
+     */
+    /**
+     * 纯注解开发
+     * 1、创建配置类，替代xml配置文件
+     *
+     *
+     *
+     *
      */
 }
