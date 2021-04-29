@@ -38,6 +38,43 @@ public class AOPDes {
      */
     /**
      * 切入点表达式
+     * execution([权限修饰符][返回类型][类全路径][方法名称][参数列表])
+     * 空格隔开
+     */
+    /**
+     * 在spring配置文件中，开启注解扫描
+     *      在xml中添加context aop名称空间
+     *      添加扫描类
+     * 使用注解创建User和UserProxy
+     *      类上添加注解 @Component
+     * 在增强类上面添加注解@Aspect
+     *      UserProxy类添加@Aspect注解
+     * 在spring 配置文件中开启生成代理对象
+     *      在xml中添加<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+     *  配置不同类型的通知
+     *      在增强类的里面，在作为通知方法上添加通知类型注解，使用切入点表达式配置
+     */
+    /**
+     * 相同的切入点的抽取
+     *
+     *  @Pointcut(value = "execution(* com.windystreet.AOP.aspectJano.User.*(..))")
+     *     public void pointDemo() {
+     *         // 方法名随意
+     *         // 相同的切入点的抽取
+     *     }
+     *
+     *     // 前置通知
+     *     @Before(value = "pointDemo()")
+     *       public void before() {
+     *         System.out.println("userProxy before....");
+     *     }
+     *
+     */
+    /**
+     * 多个增强类对同一个方法进行增强，设置增强类优先级
+     * @Component
+     * @Aspect
+     * @Order(value = 1) z数字类型值越小优先级越高
      */
 
 }
