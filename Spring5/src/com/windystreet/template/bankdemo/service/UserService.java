@@ -17,7 +17,7 @@ public class UserService {
     public void tranMoney() {
         try {
             userDao.reduceMoney();
-            int i = 10 / 0;
+//            int i = 10 / 0;
             userDao.addMoney();
         } catch (Exception e) {
             e.printStackTrace();

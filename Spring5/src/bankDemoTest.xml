@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 ">
 
-    <context:component-scan base-package="com.windystreet.template.jdbctemplate"></context:component-scan>
+    <context:component-scan base-package="com.windystreet.template.bankdemo"></context:component-scan>
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
         <property name="url" value="jdbc:mysql://192.168.5.137:3306/book_db"></property>
         <property name="username" value="root"></property>
