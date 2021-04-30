@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+">
+
+    <context:component-scan base-package="com.windystreet.template.jdbc.jdbctemplate"></context:component-scan>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="url" value="jdbc:mysql://192.168.5.137:3306/book_db"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="longrise"></property>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+    </bean>
+
+
+<!--    &lt;!&ndash;引入外部的属性文件&ndash;&gt;-->
+<!--    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>-->
+<!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--        &lt;!&ndash;加上表达式&ndash;&gt;-->
+<!--        <property name="driverClassName" value="${prop.driverClass}"></property>-->
+<!--        <property name="url" value="${prop.url}"></property>-->
+<!--        <property name="username" value="${prop.username}"></property>-->
+<!--        <property name="password" value="${prop.password}"></property>-->
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>-->
+<!--    </bean>-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+</beans>
