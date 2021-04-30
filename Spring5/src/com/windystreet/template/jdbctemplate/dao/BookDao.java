@@ -1,8 +1,6 @@
-package com.windystreet.template.jdbc.jdbctemplate.dao;
+package com.windystreet.template.jdbctemplate.dao;
 
-import com.windystreet.template.jdbc.jdbctemplate.entity.Book;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import com.windystreet.template.jdbctemplate.entity.Book;
 
 import java.util.List;
 

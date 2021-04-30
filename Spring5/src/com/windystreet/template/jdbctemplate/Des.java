@@ -1,4 +1,4 @@
-package com.windystreet.template.jdbc.jdbctemplate;
+package com.windystreet.template.jdbctemplate;
 
 /**
  * @author windyStreet
@@ -28,5 +28,19 @@ public class Des {
      * update(String sql, Object... args)
      * 参数一 sql语句
      * 参数二 可变参数，设置sql语句值
+     */
+
+    /**
+     * 事物操作
+     * 事物是数据库操作最基本单元，逻辑上一组操作，要么都成功，如果有一个失败所有操作都失败
+     *
+     * 事物四个性
+     * 原子性 A
+     * 一致性 C
+     * 隔离性 I
+     * 持久性 D
+     *
+     * 操作环境
+     *
      */
 }

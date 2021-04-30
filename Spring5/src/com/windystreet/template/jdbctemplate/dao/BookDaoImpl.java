@@ -1,6 +1,6 @@
-package com.windystreet.template.jdbc.jdbctemplate.dao;
+package com.windystreet.template.jdbctemplate.dao;
 
-import com.windystreet.template.jdbc.jdbctemplate.entity.Book;
+import com.windystreet.template.jdbctemplate.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

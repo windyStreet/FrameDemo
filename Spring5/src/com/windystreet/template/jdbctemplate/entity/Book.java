@@ -1,4 +1,4 @@
-package com.windystreet.template.jdbc.jdbctemplate.entity;
+package com.windystreet.template.jdbctemplate.entity;
 
 /**
  * @author windyStreet

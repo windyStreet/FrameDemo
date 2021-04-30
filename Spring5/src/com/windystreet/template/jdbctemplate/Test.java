@@ -1,7 +1,6 @@
-package com.windystreet.template.jdbc.jdbctemplate;
+package com.windystreet.template.jdbctemplate;
 
-import com.windystreet.template.jdbc.jdbctemplate.entity.Book;
-import com.windystreet.template.jdbc.jdbctemplate.service.BookService;
+import com.windystreet.template.jdbctemplate.service.BookService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

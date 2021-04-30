@@ -1,7 +1,7 @@
-package com.windystreet.template.jdbc.jdbctemplate.service;
+package com.windystreet.template.jdbctemplate.service;
 
-import com.windystreet.template.jdbc.jdbctemplate.dao.BookDao;
-import com.windystreet.template.jdbc.jdbctemplate.entity.Book;
+import com.windystreet.template.jdbctemplate.dao.BookDao;
+import com.windystreet.template.jdbctemplate.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
