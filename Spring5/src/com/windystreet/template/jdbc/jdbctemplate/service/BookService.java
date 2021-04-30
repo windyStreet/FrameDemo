@@ -5,6 +5,8 @@ import com.windystreet.template.jdbc.jdbctemplate.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author windyStreet
  * @codetime 2021-04-30 10:23
@@ -36,11 +38,28 @@ public class BookService {
         bookDao.delete(book);
     }
 
-    public int count(){
+    public int count() {
         return bookDao.count();
     }
-    public  Book queryBookInfoByID(String id ){
+
+    public Book queryBookInfoByID(String id) {
         return (Book) bookDao.query(id);
     }
+
+    public List<Book> queryAll() {
+        List list = bookDao.queryAll();
+        return list;
+    }
+
+    public void batchAddBook(List<Object[]> bathArgs) {
+        bookDao.batchAdd(bathArgs);
+    }
+    public void batchUpdateBook(List<Object[]> bathArgs) {
+        bookDao.batchUpdate(bathArgs);
+    }
+    public void batchDeleteBook(List<Object[]> bathArgs) {
+        bookDao.batchDelete(bathArgs);
+    }
+
 
 }

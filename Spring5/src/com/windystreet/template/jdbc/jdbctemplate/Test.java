@@ -5,15 +5,17 @@ import com.windystreet.template.jdbc.jdbctemplate.service.BookService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author windyStreet
  * @codetime 2021-04-30 10:09
  */
-public class Test
-{
+public class Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("jdbctemplateTest.xml");
-        BookService bookService = context.getBean("bookService",BookService.class);
+        BookService bookService = context.getBean("bookService", BookService.class);
 //        Book book = new Book();
 //        book.setBookId("1");
 //        book.setBookName("java");
@@ -36,5 +38,24 @@ public class Test
 //        bookService.deleteBook("4");
         System.out.println(bookService.count());
         System.out.println(bookService.queryBookInfoByID("3"));
+        System.out.println(bookService.queryAll());
+
+//        List<Object[]> batchArgs= new ArrayList();
+//        batchArgs.add(new Object[]{"6","C","1"});
+//        batchArgs.add(new Object[]{"7","C++","1"});
+//        batchArgs.add(new Object[]{"8","python","1"});
+//        bookService.batchAddBook(batchArgs);
+
+//        List<Object[]> batchArgs= new ArrayList();
+//        batchArgs.add(new Object[]{"61","C","1","6"});
+//        batchArgs.add(new Object[]{"71","C++","1","7"});
+//        batchArgs.add(new Object[]{"81","python","1","8"});
+//        bookService.batchUpdateBook(batchArgs);
+
+        List<Object[]> batchArgs = new ArrayList();
+        batchArgs.add(new Object[]{"61"});
+        batchArgs.add(new Object[]{"71"});
+        batchArgs.add(new Object[]{"81"});
+        bookService.batchDeleteBook(batchArgs);
     }
 }

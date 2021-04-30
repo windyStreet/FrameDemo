@@ -6,6 +6,9 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author windyStreet
  * @codetime 2021-04-30 10:22
@@ -64,5 +67,35 @@ public class BookDaoImpl implements BookDao {
         String sql = "select * from t_book where bookId = ?";
         Object[] args = {id};
         return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Book>(Book.class), args);
+    }
+
+    @Override
+    public List queryAll() {
+        String sql = "select * from t_book";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Book>(Book.class));
+    }
+
+    @Override
+    public void batchAdd(List<Object[]> batchArgs) {
+        String sql = "insert into t_book values(?,?,?)";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+
+    }
+
+    @Override
+    public void batchUpdate(List<Object[]> batchArgs) {
+        String sql = "update  t_book  set bookId = ?, bookName = ?, bookStatus = ? where bookId = ?";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+
+    }
+
+    @Override
+    public void batchDelete(List<Object[]> batchArgs) {
+        String sql = "delete from t_book where bookId = ?";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+
     }
 }
