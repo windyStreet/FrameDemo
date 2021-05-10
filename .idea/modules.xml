@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/FrameDemo.iml" filepath="$PROJECT_DIR$/FrameDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring5/Spring5.iml" filepath="$PROJECT_DIR$/Spring5/Spring5.iml" />
       <module fileurl="file://$PROJECT_DIR$/springreactor/springreactor.iml" filepath="$PROJECT_DIR$/springreactor/springreactor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webflux/webflux.iml" filepath="$PROJECT_DIR$/webflux/webflux.iml" />
     </modules>
   </component>
 </project>
