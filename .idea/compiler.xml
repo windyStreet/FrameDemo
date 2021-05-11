@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="webflux" />
         <module name="springreactor" />
+        <module name="webflux2" />
+        <module name="webflux" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="springreactor" target="1.8" />
       <module name="webflux" target="1.8" />
       <module name="webflux (1)" target="1.8" />
+      <module name="webflux2" target="1.8" />
       <module name="webfluxdemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -26,6 +28,7 @@
       <module name="springreactor" options="-parameters" />
       <module name="webflux" options="-parameters" />
       <module name="webflux (1)" options="-parameters" />
+      <module name="webflux2" options="-parameters" />
       <module name="webfluxdemo" options="-parameters" />
     </option>
   </component>
